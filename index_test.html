@@ -19,7 +19,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- responsive style sheet -->
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="css/mo.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 
@@ -152,30 +151,33 @@
 						</div> <!-- /.theme-title -->
 						<br>
 
-						<iframe src="https://sandbox.selapt.com/iframe/demo/moonflower-building/" width="1300" height="900" frameborder="0" id="selapt-iframe-41">
+						<iframe src="http://127.0.0.1:8000/iframe/selapt2/testova-na-selapt2/" width="1300" height="900"
+							frameborder="0" id="selapt-iframe-1">
 							<p>Your browser does not support iframes.</p>
 						</iframe>
+
 						<script type="text/javascript">
-							let iFrame41 = document.getElementById('selapt-iframe-41');
-							let eventMethod41 = window.addEventListener ? "addEventListener" : "attachEvent";
-							let eventer41 = window[eventMethod41];
-							let messageEvent41 = eventMethod41 == "attachEvent" ? "onmessage" : "message";
-							eventer41(messageEvent41, function (e) {
-								let height41 = parseInt(e.data.split('documentHeight41:')[0]) + 50;
-								if (isNaN(height41)) {
-									iFrame41.height = "900px";
+							let iFrame1 = document.getElementById('selapt-iframe-1');
+							let eventMethod1 = window.addEventListener ? "addEventListener" : "attachEvent";
+							let eventer1 = window[eventMethod1];
+							let messageEvent1 = eventMethod1 == "attachEvent" ? "onmessage" : "message";
+							eventer1(messageEvent1, function (e) {
+								let height1 = parseInt(e.data) + 50;
+								if (isNaN(height1)) {
+									iFrame1.height = "900px";
 								}
 								else {
-									iFrame41.height = height41 + 'px';
+									iFrame1.height = height1 + 'px';
 								}
 							}, false);
-							let width41 =window.innerWidth;
-							if (width41 < 1100) {
-								 iFrame41.width= (parseInt(width41) - 20) + 'px';
+							let width1 = window.innerWidth;
+							if (width1 < 1100) {
+								iFrame1.width = (parseInt(width1) - 20) + 'px';
 							}
 						</script>
-						
-						
+
+
+
 						<br><br><br><br><br>
 						<div class="text-center">
 							<br><br>
@@ -286,12 +288,6 @@
 			<script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
 			<script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
 			<script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
-
-			<!-- Google map js -->
-			<script async defer
-				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ8VrXgGZ3QSC-0XubNhuB2uKKCwqVaD0&callback=goMap"
-				type="text/javascript"></script> <!-- Gmap Helper -->
-			<script src="vendor/gmaps.min.js"></script>
 			<!-- owl.carousel -->
 			<script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
 			<!-- mixitUp -->

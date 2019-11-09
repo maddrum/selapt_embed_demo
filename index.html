@@ -19,7 +19,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- responsive style sheet -->
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="css/mo.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 
@@ -151,32 +150,37 @@
 							</p>
 						</div> <!-- /.theme-title -->
 						<br>
+					</div>
+				</div>
 
-						<iframe src="https://www.selapt.com/iframe/demo/demo-rental-building/" width="1300" height="900"
-							frameborder="0" id="selapt-iframe-3">
-							<p>Your browser does not support iframes.</p>
-						</iframe>
-
-						<script type="text/javascript">
-							let iFrame3 = document.getElementById('selapt-iframe-3');
-							let eventMethod3 = window.addEventListener ? "addEventListener" : "attachEvent";
-							let eventer3 = window[eventMethod3];
-							let messageEvent3 = eventMethod3 == "attachEvent" ? "onmessage" : "message";
-							eventer3(messageEvent3, function (e) {
-								let height3 = parseInt(e.data.split('documentHeight3:')[0]) + 50;
-								if (isNaN(height3)) {
-									iFrame3.height = "900px";
-								}
-								else {
-									iFrame3.height = height3 + 'px';
-								}
-							}, false);
-							let width3 = window.innerWidth;
-							if (width3 < 1100) {
-								iFrame3.width = (parseInt(width3) - 20) + 'px';
-							}
-						</script>
-						<br><br><br><br><br>
+				<div class="text-center">
+					<iframe src="https://www.selapt.com/iframe/demo/demo-rental-building/" width="1300" height="900"
+						frameborder="0" id="selapt-iframe-3">
+						<p>Your browser does not support iframes.</p>
+					</iframe>
+				</div>
+				<script type="text/javascript">
+					let iFrame3 = document.getElementById('selapt-iframe-3');
+					let eventMethod3 = window.addEventListener ? "addEventListener" : "attachEvent";
+					let eventer3 = window[eventMethod3];
+					let messageEvent3 = eventMethod3 == "attachEvent" ? "onmessage" : "message";
+					eventer3(messageEvent3, function (e) {
+						let height3 = parseInt(e.data) + 50;
+						if (isNaN(height3)) {
+							iFrame3.height = "900px";
+						}
+						else {
+							iFrame3.height = height3 + 'px';
+						}
+					}, false);
+					let width3 = window.innerWidth;
+					if (width3 < 1100) {
+						iFrame3.width = (parseInt(width3) - 20) + 'px';
+					}
+				</script>
+				
+				<div id="project-section">
+					<div class="container">
 						<div class="text-center">
 							<br><br>
 							<h2>Switch Language</h2>
@@ -185,9 +189,10 @@
 								<br>
 								You may also force certain language by submiting POST request to
 								https://www.selapt.com/iframe/lang/ or https://www.selapt.com/iframe/lang-redirect/
-								First one will return 'OK' and second one will redirect back referer page if referer header is present.
+								First one will return 'OK' and second one will redirect back referer page if referer
+								header is present.
 								Else it will also return 'OK'.
-														
+
 							</p>
 							<br><br>
 							<h6>Example with redirect</h6>
@@ -196,6 +201,7 @@
 								<select name="language">
 									<option value="bg">Български</option>
 									<option value="en">English</option>
+									<option value="de">Deutsch</option>
 								</select>
 								<input type="submit">
 							</form>
@@ -206,6 +212,7 @@
 								<select name="language">
 									<option value="bg">Български</option>
 									<option value="en">English</option>
+									<option value="de">Deutsch</option>
 								</select>
 								<input type="submit">
 							</form>
@@ -303,11 +310,7 @@
 			<script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
 			<script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
 
-			<!-- Google map js -->
-			<script async defer
-				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ8VrXgGZ3QSC-0XubNhuB2uKKCwqVaD0&callback=goMap"
-				type="text/javascript"></script> <!-- Gmap Helper -->
-			<script src="vendor/gmaps.min.js"></script>
+			<!-- Google map js -->			
 			<!-- owl.carousel -->
 			<script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
 			<!-- mixitUp -->
