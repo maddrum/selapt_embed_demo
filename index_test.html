@@ -8,20 +8,14 @@
 
     <!-- For Resposive Device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Web Page Example</title>
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
-
-
     <!-- Main style sheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- responsive style sheet -->
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-
     <!-- Fix Internet Explorer ______________________________________-->
 
     <!--[if lt IE 9]>
@@ -37,10 +31,10 @@
 
 
     <!--
-        =============================================
-            Theme Header
-        ==============================================
-        -->
+    =============================================
+        Theme Header
+    ==============================================
+    -->
     <header class="theme-main-header">
         <div class="container">
             <a href="index.html" class="logo float-left tran4s"><img src="images/logo/logo.png" alt="Logo"></a>
@@ -70,10 +64,10 @@
 
 
     <!--
-        =====================================================
-            Theme Main SLider
-        =====================================================
-        -->
+    =====================================================
+        Theme Main SLider
+    =====================================================
+    -->
     <div id="home" class="banner">
         <div class="rev_slider_wrapper">
             <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
@@ -92,10 +86,10 @@
 
 
     <!--
-        =====================================================
-            About us Section
-        =====================================================
-        -->
+    =====================================================
+        About us Section
+    =====================================================
+    -->
     <section id="about-us">
         <div class="container">
             <div class="theme-title">
@@ -112,10 +106,10 @@
 
 
             <!--
-        =====================================================
-            Project Section
-        =====================================================
-        -->
+    =====================================================
+        Project Section
+    =====================================================
+    -->
             <div id="project-section">
                 <div class="container">
                     <div class="theme-title">
@@ -147,46 +141,70 @@
                         </p>
                     </div> <!-- /.theme-title -->
                     <br>
+                </div>
+            </div>
 
-                    <iframe src="http://127.0.0.1:8000/iframe/selapt2/testova-na-selapt2/" width="1300" height="900"
-                            frameborder="0" id="selapt-iframe-1">
-                        <p>Your browser does not support iframes.</p>
-                    </iframe>
+            <div class="text-center">
+                <iframe src="http://127.0.0.1:8000/iframe/selapt2/testova-na-selapt2/" width="1300" height="900"
+                        frameborder="0" id="selapt-iframe-1">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+            </div>
+            <script type="text/javascript">
+                let iFrame1 = document.getElementById('selapt-iframe-1');
 
-                    <script type="text/javascript">
-                        let iFrame1 = document.getElementById('selapt-iframe-1');
-                        let eventMethod1 = window.addEventListener ? "addEventListener" : "attachEvent";
-                        let eventer1 = window[eventMethod1];
-                        let messageEvent1 = eventMethod1 == "attachEvent" ? "onmessage" : "message";
-                        eventer1(messageEvent1, function (e) {
-                            let height1 = parseInt(e.data) + 50;
-                            if (isNaN(height1)) {
-                                iFrame1.height = "900px";
-                            } else {
-                                iFrame1.height = height1 + 'px';
-                            }
-                        }, false);
-                        let width1 = window.innerWidth;
-                        if (width1 < 1100) {
-                            iFrame1.width = (parseInt(width1) - 20) + 'px';
-                        }
-                    </script>
+                // height control
+                function handleHeight1(event1) {
+                    let height1 = parseInt(event1.data);
+                    if (isNaN(height1)) {
+                        iFrame1.height = 900;
+                    } else {
+                        iFrame1.height = height1 + 100;
+                    }
+                }
 
+                window.addEventListener('message', handleHeight1, false);
+                // width control
+                let width1 = window.innerWidth;
+                if (width1 < 1100) {
+                    iFrame1.width = width1 - 20;
+                }
+            </script>
 
-                    <br><br><br><br><br>
+            <div id="project-section">
+                <div class="container">
                     <div class="text-center">
                         <br><br>
                         <h2>Switch Language</h2>
                         <p>
-                            You may also force user to switch language by submiting POST request to
-                            https://www.selapt.com/iframe/lang/ with language parameter.
-                            Try your form bellow!
+                            FOR DEVELOPERS:
+                            <br>
+                            You may also force certain language by submiting POST request to
+                            https://www.selapt.com/iframe/lang/ or https://www.selapt.com/iframe/lang-redirect/
+                            First one will return 'OK' and second one will redirect back referer page if referer
+                            header is present.
+                            Else it will also return 'OK'.
+
                         </p>
-                        <form action="https://sandbox.selapt.com/iframe/lang-redirect/" method="POST">
+                        <br><br>
+                        <h6>Example with redirect</h6>
+                        <form action="https://www.selapt.com/iframe/lang-redirect/" method="POST">
                             <label>Language</label>
                             <select name="language">
                                 <option value="bg">Български</option>
                                 <option value="en">English</option>
+                                <option value="de">Deutsch</option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <br><br>
+                        <h6>Example withOUT redirect</h6>
+                        <form action="https://www.selapt.com/iframe/lang/" method="POST">
+                            <label>Language</label>
+                            <select name="language">
+                                <option value="bg">Български</option>
+                                <option value="en">English</option>
+                                <option value="de">Deutsch</option>
                             </select>
                             <input type="submit">
                         </form>
@@ -204,10 +222,10 @@
 
 
         <!--
-        =====================================================
-            Footer
-        =====================================================
-        -->
+    =====================================================
+        Footer
+    =====================================================
+    -->
         <footer>
             <div class="container">
                 <a href="index.html" class="logo"><img src="images/logo/logo.png" alt="Logo"></a>
@@ -242,8 +260,8 @@
 
 
         <!-- =============================================
-            Loading Transition
-        ============================================== -->
+        Loading Transition
+    ============================================== -->
         <div id="loader-wrapper">
             <div id="preloader_1">
                 <span></span>
@@ -278,6 +296,8 @@
         <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
         <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
         <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
+
+        <!-- Google map js -->
         <!-- owl.carousel -->
         <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
         <!-- mixitUp -->

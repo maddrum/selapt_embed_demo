@@ -149,25 +149,29 @@
                         frameborder="0" id="selapt-iframe-3">
                     <p>Your browser does not support iframes.</p>
                 </iframe>
-            </div>
-            <script type="text/javascript">
-                let iFrame3 = document.getElementById('selapt-iframe-3');
-                let eventMethod3 = window.addEventListener ? "addEventListener" : "attachEvent";
-                let eventer3 = window[eventMethod3];
-                let messageEvent3 = eventMethod3 == "attachEvent" ? "onmessage" : "message";
-                eventer3(messageEvent3, function (e) {
-                    let height3 = parseInt(e.data) + 50;
-                    if (isNaN(height3)) {
-                        iFrame3.height = "900px";
-                    } else {
-                        iFrame3.height = height3 + 'px';
+                <script type="text/javascript">
+                    let iFrame3 = document.getElementById('selapt-iframe-3');
+
+                    // height control
+                    function handleHeight3(event3) {
+                        let height3 = parseInt(event3.data);
+                        if (isNaN(height3)) {
+                            iFrame3.height = 900;
+                        } else {
+                            iFrame3.height = height3 + 100;
+                        }
                     }
-                }, false);
-                let width3 = window.innerWidth;
-                if (width3 < 1100) {
-                    iFrame3.width = (parseInt(width3) - 20) + 'px';
-                }
-            </script>
+
+                    window.addEventListener('message', handleHeight3, false);
+                    // width control
+                    let width3 = window.innerWidth;
+                    if (width3 < 1100) {
+                        iFrame3.width = width3 - 20;
+                    }
+                </script>
+
+            </div>
+
 
             <div id="project-section">
                 <div class="container">
