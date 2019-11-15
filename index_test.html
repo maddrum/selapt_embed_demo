@@ -145,31 +145,32 @@
             </div>
 
             <div class="text-center">
-                <iframe src="http://127.0.0.1:8000/iframe/selapt2/testova-na-selapt2/" width="1300" height="900"
-                        frameborder="0" id="selapt-iframe-1">
+                <iframe src="https://sandbox.selapt.com/iframe/test-alias/moonflower-building/" width="1300"
+                        height="900" frameborder="0" id="selapt-iframe-41">
                     <p>Your browser does not support iframes.</p>
                 </iframe>
             </div>
             <script type="text/javascript">
-                let iFrame1 = document.getElementById('selapt-iframe-1');
+                let iFrame41 = document.getElementById('selapt-iframe-41');
 
                 // height control
-                function handleHeight1(event1) {
-                    let height1 = parseInt(event1.data);
-                    if (isNaN(height1)) {
-                        iFrame1.height = 900;
+                function handleHeight41(event41) {
+                    let height41 = parseInt(event41.data);
+                    if (isNaN(height41)) {
+                        iFrame41.height = 900;
                     } else {
-                        iFrame1.height = height1 + 100;
+                        iFrame41.height = height41 + 100;
                     }
                 }
 
-                window.addEventListener('message', handleHeight1, false);
+                window.addEventListener('message', handleHeight41, false);
                 // width control
-                let width1 = window.innerWidth;
-                if (width1 < 1100) {
-                    iFrame1.width = width1 - 20;
+                let width41 = window.innerWidth;
+                if (width41 < 1100) {
+                    iFrame41.width = width41 - 20;
                 }
             </script>
+
 
             <div id="project-section">
                 <div class="container">
