@@ -165,7 +165,7 @@
 
                 window.addEventListener('message', handleHeight41, false);
                 // width control
-                let width41 = window.innerWidth;
+                let width41 = $(window).width();
                 if (width41 < 1100) {
                     iFrame41.width = width41 - 20;
                 }
