@@ -29,12 +29,6 @@
 <body>
 <div class="main-page-wrapper">
 
-
-    <!--
-        =============================================
-            Theme Header
-        ==============================================
-        -->
     <header class="theme-main-header">
         <div class="container">
             <a href="index.html" class="logo float-left tran4s"><img src="images/logo/logo.png" alt="Logo"></a>
@@ -53,47 +47,20 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#home">HOME</a></li>
                         <li><a href="#about-us">ABOUT</a></li>
-                        <li><a href="#project-section">EXAMPLES</a></li>
+                        <li><a href="#iframe-demo">EMBED DEMO</a></li>
+                        <li><a href="#project-section">LANGUAGES</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav> <!-- /.theme-feature-menu -->
         </div>
-    </header> <!-- /.theme-main-header -->
+    </header>
 
 
-    <!--
-        =====================================================
-            Theme Main SLider
-        =====================================================
-        -->
-    <div id="home" class="banner">
-        <div class="rev_slider_wrapper">
-            <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
-            <div>
-                <ul>
-                    <!-- SLIDE1  -->
-                    <li>
-                        <!-- MAIN IMAGE -->
-                        <img src="images/home/hero_background.jpg">
-                        <!-- LAYERS -->
-                    </li>
-                </ul>
-            </div>
-        </div><!-- END REVOLUTION SLIDER -->
-    </div> <!--  /#banner -->
-
-
-    <!--
-        =====================================================
-            About us Section
-        =====================================================
-        -->
     <section id="about-us">
         <div class="container">
             <div class="theme-title">
-                <h2>EXAMPLE PAGE</h2>
+                <h2>ABOUT</h2>
                 <p>
                     This is an example web page to show how selapt.com embed to site function works.
                 </p>
@@ -101,219 +68,206 @@
                     Това е примерна страница за демонстрация на това как работи вграждането в уеб сайт на
                     репрезентации генерирани от selapt.com
                 </p>
+            </div>
+        </div>
+    </section>
+    <section id="iframe-demo">
+        <div class="container">
+            <div class="theme-title">
+                <h2>EMBED DEMO</h2>
+                <p style="text-align: justify; border: 2px dashed red; padding: 20px;">
+                    Here is where selapt.com frame is inserted. To do so, we have added those two lines of
+                    code
+                    bellow to web page.<br>
+                    We auto-generate that code for you, you just have to copy and paste it where you want
+                    representation to be.
+                    We have also added the auto-generated script to make the content responsive.
+                    <br>
+                    <br>
+                    Тук е вмъкната репрезентацията генерирана от платформата selapt.com. За да я заредим в
+                    страницата, добавихме два реда код, който сме показали по-долу. Този код се генерира
+                    автоматично, Вие само трябва да го копирате там където искате да е тази репрезентация.
+                    Наред с това добавихме и скрипта, който също се генерира автоматично и следи за ширината
+                    и дължината на показвания iframe.
+                    <br>
+                    <br>
+                    <code>
+                        &lt;iframe src="https://www.selapt.com/iframe/demo/demo-rental-building/" width="1100"
+                        height="900"
+                        frameborder="0"&gt;
+                        &lt;/iframe&gt;
+                    </code>
 
+
+                </p>
             </div> <!-- /.theme-title -->
-
-
-            <!--
-        =====================================================
-            Project Section
-        =====================================================
-        -->
-            <div id="project-section">
-                <div class="container">
-                    <div class="theme-title">
-                        <h2>OUR PROJECTS</h2>
-                        <p style="text-align: justify; border: 2px dashed red; padding: 20px;">
-                            Here is where selapt.com frame is inserted. To do so, we have added those two lines of
-                            code
-                            bellow to web page.<br>
-                            We auto-generate that code for you, you just have to copy and paste it where you want
-                            representation to be.
-                            We have also added the auto-generated script to make the content responsive.
-                            <br>
-                            <br>
-                            Тук е вмъкната репрезентацията генерирана от платформата selapt.com. За да я заредим в
-                            страницата, добавихме два реда код, който сме показали по-долу. Този код се генерира
-                            автоматично, Вие само трябва да го копирате там където искате да е тази репрезентация.
-                            Наред с това добавихме и скрипта, който също се генерира автоматично и следи за ширината
-                            и дължината на показвания iframe.
-                            <br>
-                            <br>
-                            <code>
-                                &lt;iframe src="https://www.selapt.com/iframe/demo/demo-rental-building/" width="1100"
-                                height="900"
-                                frameborder="0"&gt;
-                                &lt;/iframe&gt;
-                            </code>
-
-
-                        </p>
-                    </div> <!-- /.theme-title -->
-                    <br>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <iframe src="https://www.selapt.com/iframe/demo/demo-rental-building/" width="1300" height="900"
-                        frameborder="0" id="selapt-iframe-3">
-                    <p>Your browser does not support iframes.</p>
-                </iframe>
-                <script type="text/javascript">
-                    let iFrame3 = document.getElementById('selapt-iframe-3');
-
-                    // height control
-                    function handleHeight3(event3) {
-                        let height3 = parseInt(event3.data);
-                        if (isNaN(height3)) {
-                            iFrame3.height = 900;
-                        } else {
-                            iFrame3.height = height3 + 100;
-                        }
-                    }
-
-                    window.addEventListener('message', handleHeight3, false);
-                    // width control
-                    let width3 = window.innerWidth;
-                    if (width3 < 1100) {
-                        iFrame3.width = width3 - 50;
-                    }
-                </script>
-
-            </div>
-
-
-            <div id="project-section">
-                <div class="container">
-                    <div class="text-center">
-                        <br><br>
-                        <h2>Switch Language</h2>
-                        <p>
-                            FOR DEVELOPERS:
-                            <br>
-                            You may also force certain language by submiting POST request to
-                            https://www.selapt.com/iframe/lang/ or https://www.selapt.com/iframe/lang-redirect/
-                            First one will return 'OK' and second one will redirect back referer page if referer
-                            header is present.
-                            Else it will also return 'OK'.
-
-                        </p>
-                        <br><br>
-                        <h6>Example with redirect</h6>
-                        <form action="https://www.selapt.com/iframe/lang-redirect/" method="POST">
-                            <label>Language</label>
-                            <select name="language">
-                                <option value="bg">Български</option>
-                                <option value="en">English</option>
-                                <option value="de">Deutsch</option>
-                            </select>
-                            <input type="submit">
-                        </form>
-                        <br><br>
-                        <h6>Example withOUT redirect</h6>
-                        <form action="https://www.selapt.com/iframe/lang/" method="POST">
-                            <label>Language</label>
-                            <select name="language">
-                                <option value="bg">Български</option>
-                                <option value="en">English</option>
-                                <option value="de">Deutsch</option>
-                            </select>
-                            <input type="submit">
-                        </form>
-                    </div>
-                    <br>
-                    <div class="text-center">
-                        <a href='./switch_lang.html' class="btn btn-primary text-center" target="_blank">Switch
-                            Language</a>
-                    </div>
-
-                </div> <!-- /.project-gallery -->
-            </div> <!-- /.container -->
-        </div> <!-- /#project-section -->
-        <br>
-
-
-        <!--
-        =====================================================
-            Footer
-        =====================================================
-        -->
-        <footer>
-            <div class="container">
-                <a href="index.html" class="logo"><img src="images/logo/logo.png" alt="Logo"></a>
-
-                <ul>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-facebook"
-                                                                   aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest"
-                                                                   aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin"
-                                                                   aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble"
-                                                                   aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" class="tran3s round-border"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-                <p>Copyright @2018 All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                                                                       aria-hidden="true"></i> by <a
-                        href="https://colorlib.com" target="_blank">Colorlib</a></p>
-            </div>
-        </footer>
-
-
-        <!-- =============================================
-            Loading Transition
-        ============================================== -->
-        <div id="loader-wrapper">
-            <div id="preloader_1">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <br>
         </div>
 
 
-        <!-- Scroll Top Button -->
-        <button class="scroll-top tran3s p-color-bg">
-            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-        </button>
+        <div class="text-center">
+            <iframe src="https://www.selapt.com/iframe/demo/demo-rental-building/" width="1300" height="900"
+                    frameborder="0" id="selapt-iframe-3">
+                <p>Your browser does not support iframes.</p>
+            </iframe>
+            <script type="text/javascript">
+                let iFrame3 = document.getElementById('selapt-iframe-3');
+
+                // height control
+                function handleHeight3(event3) {
+                    let height3 = parseInt(event3.data);
+                    if (isNaN(height3)) {
+                        iFrame3.height = 900;
+                    } else {
+                        iFrame3.height = height3 + 100;
+                    }
+                }
+
+                window.addEventListener('message', handleHeight3, false);
+                // width control
+                let width3 = window.innerWidth;
+                if (width3 < 1100) {
+                    iFrame3.width = width3 - 50;
+                }
+            </script>
+
+        </div>
 
 
-        <!-- Js File_________________________________ -->
+    </section>
+    <section id="project-section">
+        <div class="container">
+            <div class="text-center">
+                <br><br>
+                <h2>Switch Language</h2>
+                <p>
+                    FOR DEVELOPERS:
+                    <br>
+                    You may also force certain language by submiting POST request to
+                    https://www.selapt.com/iframe/lang/ or https://www.selapt.com/iframe/lang-redirect/
+                    First one will return 'OK' and second one will redirect back referer page if referer
+                    header is present.
+                    Else it will also return 'OK'.
+
+                </p>
+                <br><br>
+                <h6>Example with redirect</h6>
+                <form action="https://www.selapt.com/iframe/lang-redirect/" method="POST">
+                    <label>Language</label>
+                    <select name="language">
+                        <option value="bg">Български</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                    <input type="submit">
+                </form>
+                <br><br>
+                <h6>Example withOUT redirect</h6>
+                <form action="https://www.selapt.com/iframe/lang/" method="POST">
+                    <label>Language</label>
+                    <select name="language">
+                        <option value="bg">Български</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                    <input type="submit">
+                </form>
+            </div>
+            <br>
+            <div class="text-center">
+                <a href='./switch_lang.html' class="btn btn-primary text-center" target="_blank">Switch
+                    Language</a>
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo/logo.png" alt="Logo"></a>
+
+            <ul>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-facebook"
+                                                               aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest"
+                                                               aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin"
+                                                               aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble"
+                                                               aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" class="tran3s round-border"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+            <p>Copyright @2018 All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                                                                   aria-hidden="true"></i> by <a
+                    href="https://colorlib.com" target="_blank">Colorlib</a></p>
+        </div>
+    </footer>
 
 
-        <!-- Bootstrap JS -->
-        <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
-
-        <!-- Vendor js _________ -->
-
-        <!-- revolution -->
-        <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
-        <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
-        <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
-
-        <!-- Google map js -->
-        <!-- owl.carousel -->
-        <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
-        <!-- mixitUp -->
-        <script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
-        <!-- Progress Bar js -->
-        <script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
-        <!-- Validation -->
-        <script type="text/javascript" src="vendor/contact-form/validate.js"></script>
-        <script type="text/javascript" src="vendor/contact-form/jquery.form.js"></script>
+    <!-- =============================================
+        Loading Transition
+    ============================================== -->
+    <div id="loader-wrapper">
+        <div id="preloader_1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 
 
-        <!-- Theme js -->
-        <script type="text/javascript" src="js/theme.js"></script>
-        <script type="text/javascript" src="js/map-script.js"></script>
+    <!-- Scroll Top Button -->
+    <button class="scroll-top tran3s p-color-bg">
+        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+    </button>
+
+
+    <!-- Js File_________________________________ -->
+
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Vendor js _________ -->
+
+    <!-- revolution -->
+    <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
+
+    <!-- Google map js -->
+    <!-- owl.carousel -->
+    <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
+    <!-- mixitUp -->
+    <script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
+    <!-- Progress Bar js -->
+    <script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
+    <!-- Validation -->
+    <script type="text/javascript" src="vendor/contact-form/validate.js"></script>
+    <script type="text/javascript" src="vendor/contact-form/jquery.form.js"></script>
+
+
+    <!-- Theme js -->
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/map-script.js"></script>
 
 </div> <!-- /.main-page-wrapper -->
 </body>
