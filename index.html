@@ -136,7 +136,7 @@ iFrame3.width = width3 - 50;
 
                 window.addEventListener('message', handleHeight3, false);
                 // width control
-                let width3 = window.innerWidth;
+                let width3 = window.document.documentElement.clientWidth;
                 if (width3 < 1100) {
                     iFrame3.width = width3 - 50;
                 }
@@ -266,7 +266,7 @@ iFrame3.width = width3 - 50;
                     "\n" +
                     "window.addEventListener('message', handleHeight" + id + ", false);\n" +
                     "// width control\n" +
-                    "let width" + id + " = window.innerWidth;\n" +
+                    "let width" + id + " = document.documentElement.clientWidth;\n" +
                     "if (width" + id + " < 1100) {\n" +
                     "iFrame" + id + ".width = width" + id + " - 50;\n" +
                     "}\n" +
