@@ -104,7 +104,7 @@ function handleHeight3(event3) {
 
 window.addEventListener('message', handleHeight3, false);
 // width control
-let width3 = window.innerWidth;
+let width3 = window.document.documentElement.clientWidth;
 if (width3 < 1100) {
 iFrame3.width = width3 - 50;
 }
